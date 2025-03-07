@@ -1,32 +1,21 @@
 // Write your code here
 const products = ["Laptop", "Phone", "Headphones", "Monitor"];
 
-function logFirstProduct(name) {
-  const toHaveBeenCalledWith = {
-    name: name
-  }
-  console.log(toHaveBeenCalledWith)
+function logFirstProduct() {
+  console.log(products[0]);
 }
 
-function addProduct(name) {
-  const newProduct = {
-    name: name
-  }
-  products.push(newProduct)
+function addProduct(productName) {
+  products.push(productName);
 }
 
-function updateProductName(name) {
-  const updatedProductName = {
-    name: name
-  }
-  products.push(1, updatedProductName)
+function updateProductName(productPosition, newName) {
+  products[productPosition] = newName;
 }
 
-function removeLastProduct(name) {
-  products.pop()
+function removeLastProduct() {
+  products = products.reverse().slice(1).reverse();
 }
-
-
 
 // Export the necessary parts for testing
 module.exports = {
